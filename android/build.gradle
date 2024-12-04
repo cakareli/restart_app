@@ -25,26 +25,26 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 34 // Use the latest supported compile SDK version
+    compileSdkVersion 34 
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 24 // Align with modern minimum SDK recommendations
-        targetSdkVersion 34 // Align with compileSdkVersion
+        minSdkVersion 24 
+        targetSdkVersion 34 
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17 // Set Java compatibility to 17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_18 
+        targetCompatibility JavaVersion.VERSION_18
     }
 
     kotlinOptions {
-        jvmTarget = '17' // Set Kotlin JVM target to 17
+        jvmTarget = '18' 
     }
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version" // Use kotlin-stdlib (removes jdk7 dependency)
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version" 
 }
